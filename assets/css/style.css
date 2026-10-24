@@ -948,3 +948,125 @@ body {
   .timeline-content { padding: 20px; }
   .contact-card { flex-direction: column; text-align: center; }
 }
+
+/* ============ UPCOMING v0.2.0 SECTION ============ */
+#upcoming {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.upcoming-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: var(--transition);
+}
+
+.upcoming-card:hover {
+  border-color: var(--accent-3);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.upcoming-card.flagship {
+  border-color: rgba(124, 77, 255, 0.3);
+  background: linear-gradient(160deg, rgba(124, 77, 255, 0.05), var(--surface) 60%);
+}
+
+.upcoming-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.upcoming-badge.upcoming {
+  color: var(--accent-3);
+  background: rgba(124, 77, 255, 0.1);
+  border: 1px solid rgba(124, 77, 255, 0.2);
+}
+
+.upcoming-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.upcoming-header h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.upcoming-desc {
+  color: var(--text-dim);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.upcoming-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.upcoming-highlight {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.upcoming-highlight:hover {
+  border-color: var(--accent-3);
+  transform: translateY(-2px);
+}
+
+.upcoming-highlight strong {
+  display: block;
+  color: var(--accent-3);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.upcoming-highlight p {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============ UPCOMING SECTION RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .upcoming-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .upcoming-card.flagship {
+    padding: 24px;
+  }
+
+  .upcoming-highlights {
+    grid-template-columns: 1fr;
+  }
+}
