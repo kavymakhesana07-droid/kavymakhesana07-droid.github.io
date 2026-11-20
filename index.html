@@ -349,6 +349,70 @@
   <div class="container">
     <h2 class="section-title reveal">Featured Projects</h2>
 
+    <!-- CAMPUS NETWORK LAB -->
+    <div class="project-card flagship reveal">
+      <div class="project-header">
+        <div>
+          <span class="status-badge">🔧 Configs validated · Packet Tracer testing in progress</span>
+          <h3>Enterprise Campus Network Lab</h3>
+        </div>
+        <a href="https://github.com/kavymakhesana07-droid/enterprise-campus-network-lab" target="_blank" rel="noopener" class="repo-link">
+          View Repo →
+        </a>
+      </div>
+
+      <p class="project-desc">
+        A two-site enterprise network (head office campus + branch) designed and configured in Cisco IOS:
+        VLAN segmentation, a Layer 3 core, OSPF, central DHCP/DNS, NAT, department ACLs, a site-to-site
+        IPsec VPN and device hardening. Includes a build guide, a test plan and break/fix troubleshooting exercises.
+      </p>
+
+      <div class="arch-flow">
+        <div class="arch-node">Users · 5 VLANs</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Access Switches<br><small>Port security · DHCP snooping</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">L3 Core<br><small>SVIs · ACLs · OSPF</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Edge Router<br><small>PAT · IPsec</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">ISP ⇄ Branch</div>
+      </div>
+
+      <div class="project-highlights">
+        <div class="highlight">
+          <strong>Segmentation &amp; Layer 2</strong>
+          <p>802.1Q VLANs for Faculty, Students, IT-Admin, Servers and Management. Rapid-PVST+ with the core as root, LACP EtherChannel, pruned trunks with a dedicated native VLAN, unused ports parked and shut.</p>
+        </div>
+        <div class="highlight">
+          <strong>Routing &amp; Services</strong>
+          <p>Inter-VLAN routing on a Layer 3 switch, OSPF area 0 to the edge router, DHCP relay to a central DHCP/DNS server, local DHCP at the branch, and PAT for internet access.</p>
+        </div>
+        <div class="highlight">
+          <strong>Security</strong>
+          <p>IPsec site-to-site VPN (AES-256, SHA, DH group 5) with NAT exemption, per-VLAN extended ACLs, SSH-only management restricted to the IT-Admin subnet, port security, DHCP snooping and BPDU guard.</p>
+        </div>
+        <div class="highlight">
+          <strong>Validation</strong>
+          <p>A Python script cross-checks all 7 device configs (112 checks: addressing, trunks, VPN mirroring, NAT, hardening) and runs in GitHub Actions. Functional tests are tracked in a verification checklist.</p>
+        </div>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech">Cisco IOS</span>
+        <span class="tech">VLAN</span>
+        <span class="tech">OSPF</span>
+        <span class="tech">IPsec VPN</span>
+        <span class="tech">NAT/PAT</span>
+        <span class="tech">ACLs</span>
+        <span class="tech">DHCP/DNS</span>
+        <span class="tech">STP/LACP</span>
+        <span class="tech">Packet Tracer</span>
+        <span class="tech">Python</span>
+        <span class="tech">GitHub Actions</span>
+      </div>
+    </div>
+
     <!-- FLAGSHIP PROJECT -->
     <div class="project-card flagship reveal">
       <div class="project-header">
